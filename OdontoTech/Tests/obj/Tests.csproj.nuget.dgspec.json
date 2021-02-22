@@ -4,14 +4,145 @@
     "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\Tests\\Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\Tests\\Tests.csproj": {
+    "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\BusinessLogicalLayer\\BusinessLogicalLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\Tests\\Tests.csproj",
-        "projectName": "Tests",
-        "projectPath": "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\Tests\\Tests.csproj",
+        "projectUniqueName": "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\BusinessLogicalLayer\\BusinessLogicalLayer.csproj",
+        "projectName": "BusinessLogicalLayer",
+        "projectPath": "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\BusinessLogicalLayer\\BusinessLogicalLayer.csproj",
         "packagesPath": "C:\\Users\\marci\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\Tests\\obj\\",
+        "outputPath": "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\BusinessLogicalLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\marci\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\DataAccessLayer\\DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\DataAccessLayer\\DataAccessLayer.csproj"
+              },
+              "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\Domain\\Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\DataAccessLayer\\DataAccessLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectName": "DataAccessLayer",
+        "projectPath": "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\DataAccessLayer\\DataAccessLayer.csproj",
+        "packagesPath": "C:\\Users\\marci\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\DataAccessLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\marci\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\Domain\\Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\Domain\\Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\Domain\\Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\marci\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\marci\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,21 +171,99 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\Tests\\Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\Tests\\Tests.csproj",
+        "projectName": "Tests",
+        "projectPath": "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\Tests\\Tests.csproj",
+        "packagesPath": "C:\\Users\\marci\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\marci\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\BusinessLogicalLayer\\BusinessLogicalLayer.csproj": {
+                "projectPath": "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\BusinessLogicalLayer\\BusinessLogicalLayer.csproj"
+              },
+              "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\DataAccessLayer\\DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\DataAccessLayer\\DataAccessLayer.csproj"
+              },
+              "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\Domain\\Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[16.5.0, )"
+              "version": "[16.8.3, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.2, )"
             },
             "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[1.2.0, )"
+              "version": "[3.0.3, )"
             },
             "xunit": {
               "target": "Package",
-              "version": "[2.4.0, )"
+              "version": "[2.4.1, )"
             },
             "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[2.4.0, )"
+              "version": "[2.4.3, )"
             }
           },
           "imports": [
