@@ -1,0 +1,118 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Aprovar Senha";
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Recuperar Senha</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/util.css">
+    <!--===============================================================================================-->
+</head>
+<body>
+
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <form class="login100-form validate-form" action="/Home/RecuperarSenhaAprovar" method="post">
+                    <span class="login100-form-title p-b-26">
+                        Recuperar Senha
+                    </span>
+                    <br />
+                    <div>
+                        <samp>
+                            <label style="color:darkgrey;font-size:13px"> Um email com o codigo de segurança foi enviado para @ViewBag.Email <br /> <br /> <input class="input100" type="hidden" style="color:dimgrey" name="email" value="@ViewBag.Email"> </label>
+
+                        </samp>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Formato invalido">
+                        <input class="input100" type="text" name="codigo" value="@ViewBag.codigo">
+                        <span class="focus-input100" data-placeholder="Codigo de segurança"></span>
+                    </div>
+
+
+                    <div>
+                        <samp>
+                            <label style="color:darkgrey;font-size:13px">Caso não encontrar verifique a caixa de SPAM.</label>
+                        </samp>
+                    </div>
+
+                    @if (Convert.ToBoolean(ViewData["msgcodigo"]) == true)
+                    {
+
+                        <label style="color:red;font-size:13px;position:center">O codigo inserido esta incorreto, Tente Novamente !</label>
+
+                    }
+
+
+                    <div class="container-login100-form-btn">
+                        <div class="wrap-login100-form-btn">
+                            <div class="login100-form-bgbtn"></div>
+                            <button class="login100-form-btn" type="submit">
+                                Recuperar
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="text-center p-t-115">
+                        <span class="txt1">
+                            Já tem uma conta?
+                        </span>
+                        <a class="txt2" href="/Home/Index">
+                            Login
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="dropDownSelect1"></div>
+
+    <!--===============================================================================================-->
+    <script src="~/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/vendor/animsition/js/animsition.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/vendor/bootstrap/js/popper.js"></script>
+    <script src="~/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/vendor/daterangepicker/moment.min.js"></script>
+    <script src="~/vendor/daterangepicker/daterangepicker.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/vendor/countdowntime/countdowntime.js"></script>
+    <!--===============================================================================================-->
+    <script src="./js/site.js"></script>
+
+
+</body>
+</html>
