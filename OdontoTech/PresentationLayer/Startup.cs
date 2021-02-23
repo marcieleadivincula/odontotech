@@ -25,7 +25,8 @@ namespace PresentationLayer
         {
             services.AddControllersWithViews();
 
-            services.AddDbContext<MyDatabaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("name=ConnectionStrings:DefaultConnection")));
+            //https://azure.github.io/AppService/2020/05/15/Robust-Apps-for-the-cloud.html#use-multiple-instances
+            //services.AddDbContext<MyDatabaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("name=ConnectionStrings:DefaultConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

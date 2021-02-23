@@ -1,5 +1,4 @@
-﻿//using System.Data.SqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using Domain;
 using System.Data.SqlClient;
@@ -161,7 +160,6 @@ namespace DataAccessLayer
             try
             {
                 conn.Open();
-                //SqlDataReader reader = cmd.ExecuteReader();
                 SqlDataReader reader = cmd.ExecuteReader();
                 Atendimento atendimento = new Atendimento();
 
