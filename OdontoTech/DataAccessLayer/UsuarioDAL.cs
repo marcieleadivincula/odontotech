@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using DataAccessLayer;
 using System.Data.SqlClient;
 using Domain;
-using System.Data.SqlClient;
 
 namespace DataAccessLayer
 {

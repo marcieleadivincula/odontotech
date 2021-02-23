@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using Domain;
-using System.Data.SqlClient;
 
 
 namespace DataAccessLayer
