@@ -26,6 +26,9 @@ namespace PresentationLayer
             services.AddControllersWithViews();
 
             //https://azure.github.io/AppService/2020/05/15/Robust-Apps-for-the-cloud.html#use-multiple-instances
+            //https://forums.asp.net/t/1228817.aspx?SQLConnection+threw+exception+of+type+System+InvalidOperationException
+            //https://stackoverflow.com/questions/33282511/how-to-fix-serverversion-threw-an-exception-of-type-system-invalidoperatione
+            //https://qastack.com.br/programming/41546943/how-to-set-aspnetcore-environment-to-be-considered-for-publishing-an-asp-net-cor
             //services.AddDbContext<MyDatabaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("name=ConnectionStrings:DefaultConnection")));
         }
 
