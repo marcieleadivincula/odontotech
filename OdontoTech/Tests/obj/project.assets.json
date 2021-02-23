@@ -8369,19 +8369,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\marci\\.nuget\\packages\\": {}
+    "C:\\Users\\entra21\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\Tests\\Tests.csproj",
+      "projectUniqueName": "C:\\Users\\entra21\\Documents\\GitHub\\odontotech\\OdontoTech\\Tests\\Tests.csproj",
       "projectName": "Tests",
-      "projectPath": "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\Tests\\Tests.csproj",
-      "packagesPath": "C:\\Users\\marci\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\Tests\\obj\\",
+      "projectPath": "C:\\Users\\entra21\\Documents\\GitHub\\odontotech\\OdontoTech\\Tests\\Tests.csproj",
+      "packagesPath": "C:\\Users\\entra21\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\entra21\\Documents\\GitHub\\odontotech\\OdontoTech\\Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\marci\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\entra21\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8395,14 +8395,14 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\BusinessLogicalLayer\\BusinessLogicalLayer.csproj": {
-              "projectPath": "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\BusinessLogicalLayer\\BusinessLogicalLayer.csproj"
+            "C:\\Users\\entra21\\Documents\\GitHub\\odontotech\\OdontoTech\\BusinessLogicalLayer\\BusinessLogicalLayer.csproj": {
+              "projectPath": "C:\\Users\\entra21\\Documents\\GitHub\\odontotech\\OdontoTech\\BusinessLogicalLayer\\BusinessLogicalLayer.csproj"
             },
-            "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\DataAccessLayer\\DataAccessLayer.csproj": {
-              "projectPath": "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\DataAccessLayer\\DataAccessLayer.csproj"
+            "C:\\Users\\entra21\\Documents\\GitHub\\odontotech\\OdontoTech\\DataAccessLayer\\DataAccessLayer.csproj": {
+              "projectPath": "C:\\Users\\entra21\\Documents\\GitHub\\odontotech\\OdontoTech\\DataAccessLayer\\DataAccessLayer.csproj"
             },
-            "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\Domain\\Domain.csproj"
+            "C:\\Users\\entra21\\Documents\\GitHub\\odontotech\\OdontoTech\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\entra21\\Documents\\GitHub\\odontotech\\OdontoTech\\Domain\\Domain.csproj"
             }
           }
         }
@@ -8461,7 +8461,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }
