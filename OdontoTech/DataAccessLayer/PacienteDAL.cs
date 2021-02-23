@@ -26,8 +26,10 @@ namespace DataAccessLayer
     {
         SqlConnection conn = new SqlConnection(DBConfig.CONNECTION_STRING);
         SqlCommand cmd = new SqlCommand();
-        public Response Insert(Paciente paciente)
+        public string Insert(Paciente paciente)
         {
+            string error;
+
             cmd.Connection = conn;
             cmd.CommandText = "INSERT INTO paciente(nome,sobrenome,rg,cpf,dtNascimento,obs,idEndereco) values(@nome, @sobrenome, @rg, @cpf, @dtNascimento, @obs, @idEndereco)";
             cmd.Parameters.AddWithValue("@nome", paciente.Nome);
@@ -38,31 +40,34 @@ namespace DataAccessLayer
             cmd.Parameters.AddWithValue("@obs", paciente.Observacao);
             cmd.Parameters.AddWithValue("@idEndereco", paciente.Endereco.Id);
 
-            Response r = new Response();
+            //Response r = new Response();
 
             try
             {
                 conn.Open();
                 cmd.ExecuteNonQuery();
 
-                r.Sucess = true;
-                r.Message = "Paciente cadastrado com sucesso.";
-                return r;
+                //r.Sucess = true;
+                //r.Message = "Paciente cadastrado com sucesso.";
+                return "Paciente cadastrado com sucesso.";
             }
             catch (Exception ex)
             {
-                r.Sucess = false;
-                r.Exception = ex;
+                //r.Sucess = false;
+                //r.Exception = ex;
+                error = ex.InnerException.ToString();
+                //error = ex.Message;
 
                 if (ex.Message.Contains("Duplicate"))
                 {
-                    r.Message = "Paciente já cadastrado.";
-                    return r;
+                    //r.Message = "Paciente já cadastrado.";
+                    return "Paciente já cadastrado.";
                 }
                 else
                 {
-                    r.Message = "Erro no Banco de dados. Contate o administrador.";
-                    return r;
+                    //r.Message = "Erro no Banco de dados. Contate o administrador.";
+                    //return "Erro no Banco de dados. Contate o administrador.";
+                    return error;
                 }
             }
             finally
@@ -71,14 +76,16 @@ namespace DataAccessLayer
             }
 
         }
-        public Response Delete(Paciente paciente)
+        public string Delete(Paciente paciente)
         {
             Response r = new Response();
+            string error;
 
             if (paciente.Id == 0)
             {
-                r.Message = "Paciente informado inválido!";
-                return r;
+                error = "Paciente informado inválido!";
+                //r.Message = "Paciente informado inválido!";
+                return error;
             }
 
             cmd.Connection = conn;
@@ -90,25 +97,30 @@ namespace DataAccessLayer
                 conn.Open();
                 cmd.ExecuteNonQuery();
 
-                r.Sucess = true;
-                r.Message = "Paciente deletado com êxito!";
-                return r;
+                //r.Sucess = true;
+                //r.Message = "Paciente deletado com êxito!";
+                return "Paciente deletado com êxito!";
             }
             catch (Exception ex)
             {
-                r.Sucess = false;
-                r.Exception = ex;
-                r.Message = "Erro no Banco de dados.Contate o administrador.";
-                return r;
+                //r.Sucess = false;
+                //r.Exception = ex;
+                //r.Message = "Erro no Banco de dados.Contate o administrador.";
+                //return r;
+
+                error = ex.InnerException.ToString();
+                //error = ex.Message;
+                return error;
             }
             finally
             {
                 conn.Dispose();
             }
         }
-        public Response Update(Paciente paciente)
+        public string Update(Paciente paciente)
         {
             Response r = new Response();
+            string error;
 
             cmd.Connection = conn;
             cmd.CommandText = "UPDATE paciente SET nome = @nome,  sobrenome = @sobrenome,  rg = @rg,  cpf = @cpf,  dtNascimento = @dtNascimento,  obs = @obs, idEndereco = @idEndereco WHERE idPaciente = @idPaciente";
@@ -125,25 +137,33 @@ namespace DataAccessLayer
             {
                 conn.Open();
                 cmd.ExecuteNonQuery();
-                r.Sucess = true;
-                r.Message = "Paciente atualizado com êxito!";
-                return r;
+
+                //r.Sucess = true;
+                //r.Message = "Paciente atualizado com êxito!";
+
+                return "Paciente atualizado com êxito!";
             }
             catch (Exception ex)
             {
-                r.Sucess = false;
-                r.Exception = ex;
-                r.Message = "Erro no Banco de dados.Contate o administrador.";
-                return r;
+                //r.Sucess = false;
+                //r.Exception = ex;
+                //r.Message = "Erro no Banco de dados.Contate o administrador.";
+                //return r;
+
+                error = ex.InnerException.ToString();
+                //error = ex.Message;
+                return error;
             }
             finally
             {
                 conn.Dispose();
             }
         }
-        public QueryResponse<Paciente> GetAll()
+        public List<Paciente> GetAll()
         {
-            Response r = new Response();
+            //Response r = new Response();
+            string error;
+
             cmd.Connection = conn;
             cmd.CommandText = "SELECT * FROM paciente";
 
@@ -153,7 +173,7 @@ namespace DataAccessLayer
                 SqlDataReader reader = cmd.ExecuteReader();
                 List<Paciente> pacientes = new List<Paciente>();
 
-                QueryResponse<Paciente> qpacientes = new QueryResponse<Paciente>();
+                //QueryResponse<Paciente> qpacientes = new QueryResponse<Paciente>();
 
                 while (reader.Read())
                 {
@@ -178,15 +198,13 @@ namespace DataAccessLayer
                     pacientes.Add(temp);
                 }
 
-                qpacientes.Items = pacientes;
-                return qpacientes;
+                return pacientes;
             }
             catch (Exception ex)
             {
-                r.Sucess = false;
-                r.Exception = ex;
-                r.Message = "Erro no Banco de dados. Contate o administrador.";
-                return r;
+                error = ex.InnerException.ToString();
+                //error = ex.Message;
+                throw new Exception("Erro no Banco de dados. Contate o administrador.");
             }
             finally
             {

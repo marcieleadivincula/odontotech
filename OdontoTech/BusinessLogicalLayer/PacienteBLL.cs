@@ -12,7 +12,7 @@ namespace BusinessLogicalLayer
         Response r = new Response();
 
         //Incluir um registro
-        public Response Insert(Paciente paciente)
+        public string Insert(Paciente paciente)
         {
             StringBuilder erros = new StringBuilder();
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
@@ -90,22 +90,21 @@ namespace BusinessLogicalLayer
 
             if (erros.Length != 0)
             {
-                r.Message = erros.ToString();
-                return r;
+                return erros.ToString();
             }
 
-            r = dal.Insert(paciente);
-            return r;
+            string respostaDB = dal.Insert(paciente);
+            return respostaDB;
         }
 
         //Obter todos os registros
-        public QueryResponse<Paciente> GetAll()
+        public List<Paciente> GetAll()
         {
             return dal.GetAll();
         }
 
         //Atualizar um registro existente
-        public Response Update(Paciente paciente)
+        public string Update(Paciente paciente)
         {
             StringBuilder erros = new StringBuilder();
 
@@ -180,23 +179,17 @@ namespace BusinessLogicalLayer
 
             }
 
-            //if (paciente.Id == 0)
-            //{
-            //    return "O ID do paciente deve ser informado.";
-            //}
-
             if (erros.Length != 0)
             {
-                r.Message = erros.ToString();
-                return r;
+                return erros.ToString();
             }
 
-            r = dal.Update(paciente);
-            return r;
+            string respostaDB = dal.Update(paciente);
+            return respostaDB;
         }
 
         //Excluir um registro
-        public Response Delete(Paciente paciente)
+        public string Delete(Paciente paciente)
         {
             StringBuilder erros = new StringBuilder();
 
@@ -207,12 +200,12 @@ namespace BusinessLogicalLayer
 
             if (erros.Length != 0)
             {
-                r.Message = erros.ToString();
-                return r;
+                return erros.ToString();
             }
 
-            r = dal.Delete(paciente);
-            return r;
+
+            string respostaDB = dal.Delete(paciente);
+            return respostaDB;
         }
 
         //Obter um registro
