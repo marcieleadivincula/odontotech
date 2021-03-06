@@ -15,7 +15,7 @@ namespace DataAccessLayer
         ///  Insere a Colaborador no BD. Caso houver erro a função informa.
         /// </summary>
         /// <param name="colaborador"></param>
-        public string Inserir(Colaborador colaborador)
+        public string Insert(Colaborador colaborador)
         {
             cmd.Connection = conn;
             cmd.CommandText = "INSERT INTO colaborador(nome, idFuncao, cro, croEstado, dtAdmissao, dtDemissao, idEndereco, idClinica, ferias, demitido) values(@nome, @idFuncao, @cro, @croEstado, @dtAdmissao, @dtDemissao, @idEndereco, @idClinica, @ferias, @demitido)";
@@ -59,7 +59,7 @@ namespace DataAccessLayer
         /// </summary>
         /// <param name="colaborador"></param>
         /// <returns></returns>
-        public string Deletar(Colaborador colaborador)
+        public string Delete(Colaborador colaborador)
         {
             if (colaborador.Id == 0)
             {
@@ -91,7 +91,7 @@ namespace DataAccessLayer
         /// </summary>
         /// <param name="colaborador"></param>
         /// <returns></returns>
-        public string Atualizar(Colaborador colaborador)
+        public string Update(Colaborador colaborador)
         {
             cmd.Connection = conn;
             cmd.CommandText = "UPDATE colaborador SET nome = @nome, cro = @cro,  croEstado = @croEstado,  dtAdmissao = @dtAdmissao,  dtDemissao = @dtDemissao, idEndereco = @idEndereco, idClinica = @idClinica, ferias = @ferias,  demitido = @demitido  WHERE idColaborador = @idColaborador";
@@ -127,10 +127,11 @@ namespace DataAccessLayer
         /// Retorna Lista Com Colaboradores !
         /// </summary>
         /// <returns></returns>
-        public List<Colaborador> SelecionaTodos()
+        public List<Colaborador> GetAll()
         {
             cmd.Connection = conn;
             cmd.CommandText = "SELECT * FROM colaborador";
+
             try
             {
                 conn.Open();

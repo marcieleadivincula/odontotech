@@ -1,5 +1,4 @@
 ﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @using Domain;
 @using BusinessLogicalLayer;
@@ -37,7 +36,10 @@
     <!--===============================================================================================-->
 </head>
 <body>
-
+    @{
+        ColaboradorBLL colaboradorBLL = new ColaboradorBLL();
+        List<Colaborador> listacolab = colaboradorBLL.GetAll();
+    }
 
     <div class="limiter">
         <div class="container-login100">
@@ -47,25 +49,12 @@
                         Cadastro
                     </span>
 
-
                     <br />
                     @* email *@
                     <div class="wrap-input100 validate-input" data-validate="Formato invalido">
                         <input class="input100" type="text" name="email">
                         <span class="focus-input100" data-placeholder="Email"></span>
                     </div>
-
-
-                    @{
-                        ColaboradorBLL colaboradorBLL = new ColaboradorBLL();
-                        List<Colaborador> listacolab = colaboradorBLL.GetAll();
-                    }
-
-
-
-
-
-
 
                     @* pass *@
                     <div class="wrap-input100 validate-input" data-validate="Insira sua senha">
@@ -75,10 +64,6 @@
                         <input class="input100" type="password" name="pass">
                         <span class="focus-input100" data-placeholder="Senha"></span>
                     </div>
-
-
-
-
 
                     @* passAgain *@
                     <div class="wrap-input100 validate-input" data-validate="Confirme sua senha">
@@ -101,7 +86,6 @@
                     <input type="hidden" name="Colaborador" value="@ViewBag.Colaborador" />
                     <br />
 
-
                     @{
                         if (Convert.ToString(ViewData["result"]) != "")
                         {
@@ -111,12 +95,10 @@
                             }
                             else
                             {
-
                                 <label style="color:red;font-size:13px"> @ViewData["result"] </label>
                             }
 
                         }
-
                     }
 
                     @{ if (Convert.ToBoolean(ViewData["SEA"]))
@@ -124,7 +106,6 @@
                             <label style="color:red;font-size:13px">As senhas não são iguais.</label>
                         }
                     }
-
 
                     <div class="container-login100-form-btn">
                         <div class="wrap-login100-form-btn">

@@ -61,13 +61,13 @@ namespace BusinessLogicalLayer
             {
                 return erros.ToString();
             }
-            string respostaDB = dal.Inserir(colaborador);
+            string respostaDB = dal.Insert(colaborador);
             return respostaDB;
         }
 
         public List<Colaborador> GetAll()
         {
-            return dal.SelecionaTodos();
+            return dal.GetAll();
         }
 
         public string Update(Colaborador colaborador)
@@ -117,7 +117,7 @@ namespace BusinessLogicalLayer
                 return erros.ToString();
             }
 
-            string respostaDB = dal.Atualizar(colaborador);
+            string respostaDB = dal.Update(colaborador);
             return respostaDB;
         }
 
@@ -135,7 +135,7 @@ namespace BusinessLogicalLayer
                 return erros.ToString();
             }
 
-            string respostaDB = dal.Deletar(colaborador);
+            string respostaDB = dal.Delete(colaborador);
             return respostaDB;
         }
         public Colaborador GetById(int id)

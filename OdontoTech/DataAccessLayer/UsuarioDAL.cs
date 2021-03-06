@@ -169,9 +169,9 @@ namespace DataAccessLayer
         public bool VerificaLogin(string login, string senha)
         {
             cmd.Connection = conn;
-            cmd.CommandText = "SELECT idUsuario FROM usuario where login = @login AND senha = @senha";
-            cmd.Parameters.AddWithValue("@login", login);
-            cmd.Parameters.AddWithValue("@senha", senha);
+            cmd.CommandText = $"SELECT idUsuario FROM usuario where login = '{login}' AND senha = '{senha}'";
+            //cmd.Parameters.AddWithValue("@login", login);
+            //cmd.Parameters.AddWithValue("@senha", senha);
 
             try
             {
@@ -186,11 +186,13 @@ namespace DataAccessLayer
             }
             catch (Exception)
             {
-
-                throw;
+                throw new Exception("Erro no Banco de dados.Contate o administrador.");
+                //throw;
             }
-
-
+            finally
+            {
+                conn.Dispose();
+            }
         }
         public Usuario GetById(int idUsuario)
         {
@@ -332,7 +334,7 @@ namespace DataAccessLayer
             cmd.Connection = conn;
             cmd.CommandText = "SELECT * FROM usuario where login = @login";
             cmd.Parameters.AddWithValue("@login", email);
-           
+
 
             try
             {

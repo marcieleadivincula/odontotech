@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\entra21\\Documents\\GitHub\\odontotech\\OdontoTech\\DataAccessLayer\\DataAccessLayer.csproj": {}
+    "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\DataAccessLayer\\DataAccessLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\entra21\\Documents\\GitHub\\odontotech\\OdontoTech\\DataAccessLayer\\DataAccessLayer.csproj": {
+    "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\DataAccessLayer\\DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\entra21\\Documents\\GitHub\\odontotech\\OdontoTech\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\DataAccessLayer\\DataAccessLayer.csproj",
         "projectName": "DataAccessLayer",
-        "projectPath": "C:\\Users\\entra21\\Documents\\GitHub\\odontotech\\OdontoTech\\DataAccessLayer\\DataAccessLayer.csproj",
-        "packagesPath": "C:\\Users\\entra21\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\entra21\\Documents\\GitHub\\odontotech\\OdontoTech\\DataAccessLayer\\obj\\",
+        "projectPath": "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\DataAccessLayer\\DataAccessLayer.csproj",
+        "packagesPath": "C:\\Users\\marci\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\entra21\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\marci\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\entra21\\Documents\\GitHub\\odontotech\\OdontoTech\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\entra21\\Documents\\GitHub\\odontotech\\OdontoTech\\Domain\\Domain.csproj"
+              "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\Domain\\Domain.csproj"
               }
             }
           }
@@ -160,21 +160,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\entra21\\Documents\\GitHub\\odontotech\\OdontoTech\\Domain\\Domain.csproj": {
+    "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\entra21\\Documents\\GitHub\\odontotech\\OdontoTech\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\entra21\\Documents\\GitHub\\odontotech\\OdontoTech\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\entra21\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\entra21\\Documents\\GitHub\\odontotech\\OdontoTech\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\marci\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marci\\source\\repos\\odontotech\\OdontoTech\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\entra21\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\marci\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -316,7 +316,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }

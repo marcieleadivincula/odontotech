@@ -1,9 +1,5 @@
 ﻿using System.Data.SqlClient;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using DataAccessLayer;
 using Domain;
 using System.Net.Mail;
@@ -17,9 +13,9 @@ namespace DataAccessLayer
         public string Insert(string codigo, string email)
         {
             cmd.Connection = conn;
-            cmd.CommandText = $"INSERT INTO codseguranca (Codigo,Email) values (@Codigo,@Email)";
-            cmd.Parameters.AddWithValue("@Codigo", codigo);
-            cmd.Parameters.AddWithValue("@Email", email);
+            cmd.CommandText = $"INSERT INTO codseguranca (Codigo,Email) values ({codigo},{email})";
+            //cmd.Parameters.AddWithValue("@Codigo", codigo);
+            //cmd.Parameters.AddWithValue("@Email", email);
 
             try
             {
@@ -47,8 +43,8 @@ namespace DataAccessLayer
         public string GetCODByEmail(string Email)
         {
             cmd.Connection = conn;
-            cmd.CommandText = "SELECT * FROM codseguranca WHERE Email = @Email";
-            cmd.Parameters.AddWithValue("@Email", Email);
+            cmd.CommandText = $"SELECT * FROM codseguranca WHERE Email = {Email}";
+            //cmd.Parameters.AddWithValue("@Email", Email);
 
             try
             {
